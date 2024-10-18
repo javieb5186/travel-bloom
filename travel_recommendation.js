@@ -12,11 +12,11 @@ const jsonMatcher = ["beaches", "countries", "temples"];
 container.style.display = "none";
 
 searchButton.addEventListener("click", () => {
-  container.style.display = "block";
   container.innerHTML = "";
   const value = searchInput.value;
   keywords.forEach(async (keyword, index) => {
     if (keyword.test(value)) {
+      container.style.display = "block";
       const res = await getRecommendations();
       const recommendations = res[jsonMatcher[index]];
       console.log(recommendations);
