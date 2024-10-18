@@ -76,6 +76,7 @@ searchButton.addEventListener("click", () => {
 clearButton.addEventListener("click", () => {
   container.style.display = "none";
   container.innerHTML = "";
+  searchInput.value = "";
 });
 
 async function getRecommendations() {
