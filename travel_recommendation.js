@@ -79,7 +79,7 @@ clearButton.addEventListener("click", () => {
 });
 
 async function getRecommendations() {
-  const jsonData = await fetch("/travel_recommendation_api.json");
+  const jsonData = await fetch("/travel-bloom/travel_recommendation_api.json");
   const data = await jsonData.json();
   return data;
 }
